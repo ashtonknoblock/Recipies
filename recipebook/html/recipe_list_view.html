@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recipe Book</title>
+</head>
+<body>
+
+    <h2>Recipe Book</h2>
+    <ul>
+        {% for item in data %}
+            <li>
+                <a href="/recipe/{{ item.id }}">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h3>
+        <p><a href="recipe_add/">Add new recipe</a></p>
+        <p><a href="author_add/">Add new author</a></p>
+        <p><a href="logout/">logout</a></p>
+
+    </h3>
+</body>
+<script>    
+</script>
+</html>
